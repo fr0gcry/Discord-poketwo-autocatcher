@@ -13,7 +13,8 @@ for i in file:
 mon_list = []
 for i in file:
     if len(i) >= 3:
-        mon_list.append(i)
+        mon_list.apq
+        pend(i)
 import discord
 from discord.ext import commands
 from discord.ext import tasks
@@ -22,7 +23,7 @@ from keep_alive import keep_alive
 import requests
 from discord_webhook import DiscordWebhook
 cid = "Put channel id here"#dont put quotes around the channel id
-token ="Your Token here"
+token ="ODUwNDM5OTY2NzU2NTY5MTUx.YLpv8A.af4_jJ4t5cJyY60Nu5dwm8Ewqcw"
 editing = {
 
 }
@@ -80,7 +81,7 @@ async def on_message(message):
       if "pokémon has appeared" in title:
         hint = ""
         
-        m = await message.channel.send("p!hint")
+        m = await message.channel.send(".hint")
         
         while True:
           response = await client.wait_for('message', check = check, timeout=300) 
@@ -95,7 +96,7 @@ async def on_message(message):
       print(x)
       first_options = x
       for i in first_options:
-        await message.channel.send("p!catch "+i)
+        await message.channel.send(".catch "+i)
       
 
 
